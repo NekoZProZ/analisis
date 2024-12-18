@@ -4,7 +4,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">Data User</h4>
+                        <h4 class="page-title">Data Analisis</h4>
                         <div class="ml-auto text-right">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
@@ -31,18 +31,20 @@
                         
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Data Barang</h5>
+                                <h5 class="card-title">Data Analisis</h5>
                                 <div class="table-responsive">
-                                
+                                <!-- <a href="<?= base_url('home/tambah_analisis')?>">
+                                          <button type="button" class="btn btn-success m-2">Tambah</button>
+                                          </a> -->
                                     <table id="zero_config" class="table table-striped table-bordered">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Nama Barang</th>
+                                                <th>Username</th>
+                                                <th>Foto Motor</th>
+                                                <th>Nomor Plat</th>
+                                                <th>Deskripsi</th>
                                                 <th>Tanggal</th>
-                                                <th>User</th>
-                                                <th>Harga</th>
-                                                
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -52,10 +54,11 @@
 ?>
                                             <tr>
                                         <th scope="row"><?= $no++ ?></th>
-                                        <td><?= $nelson->nama_barang ?></td>
-                                        <td><?= $nelson->tgl_lelang ?></td>
-                                        <td><?= $nelson->nama_lengkap ?></td>
-                                        <td><?= $nelson->penawaran_harga ?></td>
+                                        <td><?= $nelson->username ?></td>
+                                        <td><img src="<?= base_url('foto/' . $nelson->foto) ?>" width="120px"></td>
+                                        <td><?= $nelson->plat_motor ?></td>
+                                        <td><?= $nelson->deskripsi ?></td>
+                                        <td><?= $nelson->tanggal ?></td>
                                         
                                     </tr>
                                     <?php } ?>
